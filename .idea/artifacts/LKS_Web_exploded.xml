@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="LKS:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/LKS_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="LKS/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="LKS" />
+          <element id="directory" name="library">
+            <element id="library" level="project" name="Maven: javax.el:el-api:2.2" />
+            <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+            <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+            <element id="library" level="project" name="Maven: junit:junit:4.12" />
+            <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+            <element id="library" level="project" name="Maven: org.postgresql:postgresql:9.4.1212.jre7" />
+            <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.10" />
+            <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+            <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.7.25" />
+          </element>
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
