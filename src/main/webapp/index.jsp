@@ -7,8 +7,8 @@
 </head>
 <body>
 <jsp:include page="views/headers/index_header.jsp"/>
-<div style="width: 100%; height: 600px;  display: flex; justify-content: center; align-items: center; background-color: #2f77d4">
-    <div align="center" style="width: 100%; height: 160px; background-color: #fbff10">
+<div style="width: 100%; height: 600px;  display: flex; justify-content: center; align-items: center; background-color: #0a1bd4">
+    <div align="center" style="width: 100%; height: 160px; background-color: #fffda0">
         <form style="width: 100%; height: 100%" id="policyholderForm" action="index" method="post">
             <table align="center" style="height: 100%; width: 100%; border-spacing: 10px">
                 <tr>
