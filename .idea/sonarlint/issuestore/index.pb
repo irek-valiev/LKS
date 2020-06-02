@@ -90,3 +90,11 @@ b
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+T
+$.idea/artifacts/LKS_Web_exploded.xml,0\7\074eca59e7b3c6a4640f02d9617aff1fc960c5e8
+U
+%src/main/webapp/auht/registration.jsp,9\a\9af1f19c626f7c9ae8e44403bfdb56e7d480d6d7
+M
+src/main/webapp/auht/auth.jsp,0\9\09441c9bd56e33a18d92a6248eeb5b10fd50e2ea
+e
+5src/main/webapp/views/headers/registration_header.jsp,9\1\91d489fd12a047336923e0ef7c783377ba848178

@@ -1,3 +1,11 @@
 
-J	Web:S1827")Remove this deprecated "align" attribute.(Ñú ışÿÿÿÿ8æ¸ Û¤.
-JWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(Õ¶¯M8æ¸ Û¤.
+H	Web:S1827")Remove this deprecated "width" attribute.(´°¡Êùÿÿÿÿ8áÅô§.
+HWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(Õ¶¯M8æ¸ Û¤.
+B	Web:S1827")Remove this deprecated "width" attribute.(­ı¯68ÿªÅ§.
+H	Web:S1827")Remove this deprecated "width" attribute.(‚Ÿ­úÿÿÿÿ8ûÙá‚§.
+LWeb:TableWithoutCaptionCheck" Add a description to this table.(­ı¯68§ïÄ§.
+QWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(´°¡Êùÿÿÿÿ8˜¨Æ§.
+B	Web:S1827")Remove this deprecated "width" attribute.(¸—¤%8ç£§‚§.
+H	Web:S1827")Remove this deprecated "align" attribute.(´°¡Êùÿÿÿÿ8¦½Ú§.
+B	Web:S1827")Remove this deprecated "align" attribute.(¸—¤%8ç£§‚§.
+>	Web:S5256"%Add "<th>" headers to this "<table>".(­ı¯68§ïÄ§.
