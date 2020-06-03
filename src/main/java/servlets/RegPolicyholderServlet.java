@@ -88,6 +88,6 @@ public class RegPolicyholderServlet extends HttpServlet {
     private boolean isLoginAlreadyExist(String login){
         PolicyholderDAO policyholderDAO = new PolicyholderDAO();
         List<Policyholder> allPolicyholder = policyholderDAO.getAll();
-        return allPolicyholder.stream().map(Policyholder::getLogin).anyMatch(x -> x.equalsIgnoreCase(login));
+       return allPolicyholder.stream().map(Policyholder::getLogin).anyMatch(x -> x.equalsIgnoreCase(login));
     }
 }

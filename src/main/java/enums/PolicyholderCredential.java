@@ -11,7 +11,7 @@ public enum PolicyholderCredential {
     /**
      * Наименование организации
      */
-    NAME_OF_COMPANY("nameOfConpany"),
+    NAME_OF_COMPANY("nameOfCompany"),
     /**
      * ИНН организации
      */

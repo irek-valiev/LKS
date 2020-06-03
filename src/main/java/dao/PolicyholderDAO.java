@@ -37,6 +37,7 @@ public class PolicyholderDAO implements DAO<Policyholder> {
             preparedStatement.setString(3, policyholder.getNameOfCompany());
             preparedStatement.setString(4, policyholder.getInn());
             preparedStatement.setString(5, policyholder.getDirector());
+            preparedStatement.setInt(6, policyholder.getAccount().getId());
             preparedStatement.executeUpdate();
         } catch (DataSourceServiceException e){
             log.error("Ошибка подключения к БД при попытке вставки записи с данными страхователя", e);

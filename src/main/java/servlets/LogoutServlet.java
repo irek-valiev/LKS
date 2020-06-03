@@ -13,6 +13,6 @@ public class LogoutServlet extends HttpServlet {
     @Override
     protected void doPost ( HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
         httpServletRequest.getSession().invalidate();
-        ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.AUTH_PAGE.getPage());
+        ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.INDEX_PAGE.getPage());
     }
 }

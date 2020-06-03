@@ -64,7 +64,7 @@ public class DataSourceService {
             if (connection != null){
                 return connection.prepareStatement(query);
             }else {
-                String errorMessage = String.join(" ", "Не удалось полчить подключение при создании " +
+                String errorMessage = String.join(" ", "Не удалось получить подключение при создании " +
                         "подготовленного выражения для запроса", query);
                 log.error(errorMessage);
                 throw  new DataSourceServiceException(errorMessage);

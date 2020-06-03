@@ -26,4 +26,11 @@
     </div>
 </div>
 </body>
+<footer>
+    <table align="center" style="height: 100%; width: 100%">
+        <td align="center">
+            <label>Copyright: IT-park Kazan. Valiev Irek, 2020</label>
+        </td>
+    </table>
+    </footer>
 </html>
