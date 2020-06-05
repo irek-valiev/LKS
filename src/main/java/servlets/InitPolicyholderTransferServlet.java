@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 /**
  * Сервлет для инициализации элемента select
  */
-@WebServlet(name = "initPolicyholderTransfer", urlPatterns = "/initPolicyholderTransfer")
+@WebServlet(name = "initPolicyholdersTransfer", urlPatterns = "/initPolicyholdersTransfer")
 public class InitPolicyholderTransferServlet extends HttpServlet {
     /**
      * Метод обработки GET-запроса

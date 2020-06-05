@@ -4,11 +4,13 @@ import beans.Account;
 import beans.Policyholder;
 import dao.AccountDAO;
 import enums.AccountInfo;
+import enums.Page;
 import enums.PolicyholderCredential;
 import exceptions.UnregistredAccountException;
 import exceptions.UnregistredPolicyholderException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
@@ -44,16 +46,16 @@ public class SessionUtil {
      * @param policyholder клиент
      */
     public static void fillSession(HttpSession httpSession, Policyholder policyholder){
-        httpSession.setAttribute(PolicyholderCredential.ID.getPolicyholderCredential(), policyholder.getId());
-        httpSession.setAttribute(PolicyholderCredential.NAME_OF_COMPANY.getPolicyholderCredential(), policyholder.getNameOfCompany());
-        httpSession.setAttribute(PolicyholderCredential.INN.getPolicyholderCredential(), policyholder.getInn());
-        httpSession.setAttribute(PolicyholderCredential.DIRECTOR.getPolicyholderCredential(), policyholder.getDirector());
-        httpSession.setAttribute(PolicyholderCredential.LOGIN.getPolicyholderCredential(), policyholder.getLogin());
-        httpSession.setAttribute(PolicyholderCredential.PSSWD.getPolicyholderCredential(), policyholder.getPsswd());
-        httpSession.setAttribute(PolicyholderCredential.ACCOUNT_ID.getPolicyholderCredential(), policyholder.getAccount().getId());
-        httpSession.setAttribute(AccountInfo.ACCOUNT_NUMBER.getAccountInfo(), policyholder.getAccount().getAccountNumber());
-        httpSession.setAttribute(AccountInfo.SUM.getAccountInfo(), policyholder.getAccount().getSum());
-        httpSession.setMaxInactiveInterval(300);
+            httpSession.setAttribute(PolicyholderCredential.ID.getPolicyholderCredential(), policyholder.getId());
+            httpSession.setAttribute(PolicyholderCredential.NAME_OF_COMPANY.getPolicyholderCredential(), policyholder.getNameOfCompany());
+            httpSession.setAttribute(PolicyholderCredential.INN.getPolicyholderCredential(), policyholder.getInn());
+            httpSession.setAttribute(PolicyholderCredential.DIRECTOR.getPolicyholderCredential(), policyholder.getDirector());
+            httpSession.setAttribute(PolicyholderCredential.LOGIN.getPolicyholderCredential(), policyholder.getLogin());
+            httpSession.setAttribute(PolicyholderCredential.PSSWD.getPolicyholderCredential(), policyholder.getPsswd());
+            httpSession.setAttribute(PolicyholderCredential.ACCOUNT_ID.getPolicyholderCredential(), policyholder.getAccount().getId());
+            httpSession.setAttribute(AccountInfo.ACCOUNT_NUMBER.getAccountInfo(), policyholder.getAccount().getAccountNumber());
+            httpSession.setAttribute(AccountInfo.SUM.getAccountInfo(), policyholder.getAccount().getSum());
+            httpSession.setMaxInactiveInterval(300);
     }
 
     /**

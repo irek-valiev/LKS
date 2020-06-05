@@ -1,14 +1,14 @@
 
-SWeb:ImgWithoutAltCheck
-"%Add an "alt" attribute to this image.(´°¡Êùÿÿÿÿ8˜¨Æ§.
-NWeb:TableWithoutCaptionCheck" Add a description to this table.(­ı¯68§ïÄ§.
-@	Web:S5256"%Add "<th>" headers to this "<table>".(­ı¯68§ïÄ§.
-D	Web:S1827")Remove this deprecated "width" attribute.(¸—¤%8ç£§‚§.
-J	Web:S1827
-")Remove this deprecated "width" attribute.(´°¡Êùÿÿÿÿ8áÅô§.
 J	Web:S1827
 ")Remove this deprecated "align" attribute.(´°¡Êùÿÿÿÿ8¦½Ú§.
+@	Web:S5256"%Add "<th>" headers to this "<table>".(­ı¯68§ïÄ§.
+NWeb:TableWithoutCaptionCheck" Add a description to this table.(­ı¯68§ïÄ§.
+SWeb:ImgWithoutAltCheck
+"%Add an "alt" attribute to this image.(´°¡Êùÿÿÿÿ8˜¨Æ§.
+D	Web:S1827")Remove this deprecated "width" attribute.(¸—¤%8ç£§‚§.
 J	Web:S1827")Remove this deprecated "width" attribute.(‚Ÿ­úÿÿÿÿ8ûÙá‚§.
 D	Web:S1827")Remove this deprecated "align" attribute.(¸—¤%8ç£§‚§.
+J	Web:S1827
+")Remove this deprecated "width" attribute.(´°¡Êùÿÿÿÿ8áÅô§.
 JWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(Õ¶¯M8æ¸ Û¤.
 D	Web:S1827")Remove this deprecated "width" attribute.(­ı¯68ÿªÅ§.

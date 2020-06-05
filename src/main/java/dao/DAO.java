@@ -1,5 +1,8 @@
 package dao;
 
+import exceptions.RegException;
+import exceptions.UnregistredPolicyholderException;
+
 import java.util.List;
 
 /**
@@ -14,7 +17,7 @@ public interface DAO<T> {
      *
      * @param t обобщенный тип
      */
-    void insert(T t);
+    void insert(T t) throws UnregistredPolicyholderException, RegException;
 
     default T get (String firstParam) throws Exception{
         return null;

@@ -33,6 +33,7 @@ public class ReplenishServlet extends HttpServlet {
             Account currentAccount = accountDAO.getById((Integer) httpServletRequest.getSession().getAttribute(PolicyholderCredential.ACCOUNT_ID.getPolicyholderCredential()));
             AccountProcessor.replenishAccount(currentAccount, Integer.parseInt(sum));
             accountDAO.update(currentAccount);
+            ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_TRANSACTION_PAGE.getPage());
         } catch (Exception e){
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
         }

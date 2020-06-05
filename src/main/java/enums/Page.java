@@ -29,6 +29,10 @@ public enum Page {
      * Страница успешной аутентификации
      */
     SUCCESS_AUTH_PAGE("/views/successAuthPolicyholder.jsp"),
+    /**
+     *Страница упешного завершения проводимой денежной операции
+     */
+    SUCCESS_TRANSACTION_PAGE("/views/successTransaction.jsp"),
 
     /**
      * Страница профиля
@@ -36,9 +40,23 @@ public enum Page {
     PROFILE_PAGE("/views/profile.jsp"),
 
     /**
-     * Страница с ошибкой
+     * Страница с ошибкой операций со счетом
      */
-    ERROR_PAGE("/views/error.jsp");
+    ERROR_PAGE("/views/error.jsp"),
+
+    /**
+     * Страница ошибки при регистрации с пустыми полями
+     */
+    ERROR_EMPTY_REG("/views/error_empty_reg.jsp"),
+    /**
+     * Страница ошибки при попытке авторизоваться с пустыми полями
+     */
+    ERROR_EMPTY_AUTH("/views/error_empty_auth.jsp"),
+
+    /**
+     * Страница с ошибкой при регистрации
+     */
+    ERROR_REG_PAGE("/views/error_reg.jsp");
 
     /**
      * Поле страница

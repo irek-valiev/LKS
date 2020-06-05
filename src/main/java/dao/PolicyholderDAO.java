@@ -3,11 +3,13 @@ import beans.Account;
 import beans.Policyholder;
 import enums.PolicyholderCredential;
 import exceptions.DataSourceServiceException;
+import exceptions.RegException;
 import exceptions.UnregistredAccountException;
 import exceptions.UnregistredPolicyholderException;
 import lombok.extern.slf4j.Slf4j;
 import service.DataSourceService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -30,7 +32,7 @@ public class PolicyholderDAO implements DAO<Policyholder> {
      * @param policyholder объект клиент
      */
     @Override
-    public void insert (Policyholder policyholder) {
+    public void insert (Policyholder policyholder) throws RegException {
         try(PreparedStatement preparedStatement = dataSourceService.getPreparedStatement(PolicyholderQuerier.INSERT_INTO_POLICYHOLDER_VALUES)) {
             preparedStatement.setString(1, policyholder.getLogin());
             preparedStatement.setString(2, policyholder.getPsswd());
@@ -41,8 +43,10 @@ public class PolicyholderDAO implements DAO<Policyholder> {
             preparedStatement.executeUpdate();
         } catch (DataSourceServiceException e){
             log.error("Ошибка подключения к БД при попытке вставки записи с данными страхователя", e);
+            throw new RegException();
         }catch (SQLException e){
             log.error("Ошибка запроса при попытке вставки записи с данными страхователя " + PolicyholderQuerier.INSERT_INTO_POLICYHOLDER_VALUES, e);
+            throw new RegException();
         } finally {
             dataSourceService.closeConnection();
         }

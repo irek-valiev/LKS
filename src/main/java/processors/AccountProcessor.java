@@ -29,7 +29,7 @@ public class AccountProcessor {
         log.info(String.join(" ", "Пополнеие счета", String.valueOf(account.getAccountNumber()), "на сумму ", String.valueOf(replenishSum)));
         validateReplenishSum(replenishSum);
         account.setSum(account.getSum() + replenishSum);
-        log.info(String.join(" ", "Пополнение счета", String.valueOf(account.getAccountNumber()), "прошло усешно. Текущая сумма на счета", String.valueOf(account.getSum())));
+        log.info(String.join(" ", "Пополнение счета", String.valueOf(account.getAccountNumber()), "прошло успешно. Текущая сумма на счете", String.valueOf(account.getSum())));
     }
 
     private static boolean validateWithdrawalSum(int accountSum, int withdrawalSum) throws WithdrawalException{

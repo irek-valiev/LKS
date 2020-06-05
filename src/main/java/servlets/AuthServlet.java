@@ -36,17 +36,29 @@ public class AuthServlet extends HttpServlet {
         String policyholderPsswd = httpServletRequest.getParameter(PolicyholderCredential.PSSWD.getPolicyholderCredential());
         PolicyholderDAO policyholderDAO = new PolicyholderDAO();
         Policyholder policyholder = null;
-        try {
-            policyholder = policyholderDAO.get(policyholderLogin, policyholderPsswd);
-            if(policyholder != null){
-                //TODO Вывести на GUI предупреждение "Проблемы с БД, обратись к админу"
+        if(isPolicyholderAttributeNull(policyholderLogin, policyholderPsswd)){
+            ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_EMPTY_AUTH.getPage());
+        } else {
+            try {
+                if((policyholder = policyholderDAO.get(policyholderLogin, policyholderPsswd)) == null){
+                    //TODO Вывести на GUI предупреждение "Проблемы с БД, обратитесь к администратору"
+                    ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
+                }
+            }catch (UnregistredPolicyholderException | UnregistredAccountException e){
+                //TODO Вывести на GUI предупреждение с незарегистрирвоным клиентом
+                log.error(e.getMessage());
             }
-        }catch (UnregistredPolicyholderException | UnregistredAccountException e){
-            //TODO Вывести на GUI предупреждение с незарегистрирвоным клиентом
-            log.error(e.getMessage());
+            HttpSession httpSession = httpServletRequest.getSession();
+            SessionUtil.fillSession(httpSession, policyholder);
+            ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_AUTH_PAGE.getPage());
         }
-        HttpSession httpSession = httpServletRequest.getSession();
-        SessionUtil.fillSession(httpSession, policyholder);
-        ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_AUTH_PAGE.getPage());
+    }
+
+    private boolean isPolicyholderAttributeNull (@org.jetbrains.annotations.NotNull String login, String psswd){
+        if(login.equals("")){
+            return true;
+        } else if(psswd.equals("")){
+            return true;
+        } else return false;
     }
 }
