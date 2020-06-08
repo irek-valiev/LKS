@@ -15,7 +15,7 @@
             </form>
         </td>
         <td width="15%" align="right">
-            <form id="logoutForm" action="../logout" method="post">
+            <form id="logoutForm" action="${pageContext.servletContext.contextPath}/logout" method="post">
                 <input id="logoutButton" type="submit" name="logoutButton" value="Выйти" style="width: 200px; height: 50px; font-size: medium">
             </form>
         </td>

@@ -35,7 +35,7 @@
     <div align="center" style="background-color: #1082d4">
         <div class="topnav">
             <a href="pay.jsp" target="payOperationFrame">Оплата</a>
-            <a href="../initPolicyholdersTransfer" target="payOperationFrame">Перевод</a>
+            <a href="${pageContext.servletContext.contextPath}/initPolicyholdersTransfer" target="payOperationFrame">Перевод</a>
             <a href="withdrawal.jsp" target="payOperationFrame">Вывод</a>
             <a href="replenish.jsp" target="payOperationFrame">Пополнение</a>
         </div>

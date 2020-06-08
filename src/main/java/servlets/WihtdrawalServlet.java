@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Сервлет для обработки снятия средств
  */
-@WebServlet(name = "wiihdrawal", urlPatterns = "/withdrawal")
+@WebServlet(name = "withdrawal", urlPatterns = "/withdrawal")
 public class WihtdrawalServlet extends HttpServlet {
     /**
      * Метод обработки POST-запроса
