@@ -18,7 +18,7 @@ public enum Page {
     /**
      * Страница успешной регистрации
      */
-    SUCCESS_REG_PAGE("/views/successRegPolicyholder.jsp"),
+    SUCCESS_REG_PAGE("/views/core/successRegPolicyholder.jsp"),
 
     /**
      * Страница аутентификации
@@ -28,16 +28,16 @@ public enum Page {
     /**
      * Страница успешной аутентификации
      */
-    SUCCESS_AUTH_PAGE("/views/successAuthPolicyholder.jsp"),
+    SUCCESS_AUTH_PAGE("/views/core/successAuthPolicyholder.jsp"),
     /**
      *Страница упешного завершения проводимой денежной операции
      */
-    SUCCESS_TRANSACTION_PAGE("/views/successTransaction.jsp"),
+    SUCCESS_TRANSACTION_PAGE("/views/core/successTransaction.jsp"),
 
     /**
      * Страница профиля
      */
-    PROFILE_PAGE("/views/profile.jsp"),
+    PROFILE_PAGE("/views/core/profile.jsp"),
 
     /**
      * Страница с ошибкой операций со счетом
@@ -52,6 +52,18 @@ public enum Page {
      * Страница ошибки при попытке авторизоваться с пустыми полями
      */
     ERROR_EMPTY_AUTH("/views/error_empty_auth.jsp"),
+    /**
+     * Страница ошибки при попытке авторизоваться с неверными логином и/или паролем
+     */
+    ERROR_AUTH_PAGE("/views/error_auth.jsp"),
+    /**
+     * Страница ошибки при nullе
+     */
+    ERROR_NULL_PAGE("/views/error_null_page"),
+    /**
+     * Инфостраница для фильтра при потыке пройти внутрь системы без авторизации
+     */
+    ERROR_NOSESSION_PAGE("/views/error_nosession_page.jsp"),
 
     /**
      * Страница с ошибкой при регистрации

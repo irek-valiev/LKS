@@ -35,7 +35,7 @@ public class InitPolicyholderTransferServlet extends HttpServlet {
                         .getAttribute(PolicyholderCredential.ID.getPolicyholderCredential())).
                         collect(Collectors.toList());
         httpServletRequest.setAttribute("allPolicyholders", policyholdersWihtoutCurrent);
-        RequestDispatcher dispatcher = httpServletRequest.getRequestDispatcher("views/transfer.jsp");
+        RequestDispatcher dispatcher = httpServletRequest.getRequestDispatcher("views/core/transfer.jsp");
         try {
             dispatcher.forward(httpServletRequest, httpServletResponse);
         } catch (ServletException e){

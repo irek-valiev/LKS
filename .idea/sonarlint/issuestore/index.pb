@@ -122,3 +122,15 @@ S
 #src/main/webapp/views/error_reg.jsp,2\6\26cf406426ba4f6b3f7bfe3033c67f7502d51442
 \
 ,src/main/webapp/views/successTransaction.jsp,e\f\efa9f7332e75de54944a1617ce51c3730eec2c6b
+[
++src/main/java/exceptions/AuthException.java,1\d\1d406ddae567aa3f6742cbaf165129eeab4f8b54
+Z
+*src/main/java/exceptions/RegException.java,6\2\62eae2e9164048231542c87022bb92e47a24364e
+Y
+)src/main/webapp/views/error_empty_reg.jsp,3\e\3e6c27b1684cff7978430aafbda70dd15724d476
+Z
+*src/main/webapp/views/error_empty_auth.jsp,a\0\a047af8c5f523424e40cbaa2ab3acee91d12371d
+T
+$src/main/webapp/views/error_auth.jsp,c\6\c6a1f8034ec13b42b58c06c4d2bbc3992bf65de9
+Y
+)src/main/webapp/views/error_null_page.jsp,7\5\75071dd813bb5ce641c93948bc2b29bf9915a2e5

@@ -15,4 +15,6 @@ public class PolicyholderQuerier {
     protected static final String SELECT_ALL_POLICYHOLDER = "SELECT * FROM LKS.LKS.POLICYHOLDER";
 
     protected static final String SELECT_POLICYHOLDER_BY_ID = "SELECT * FROM LKS.LKS.POLICYHOLDER WHERE ID = ?";
+
+    protected static final String SELECT_POLICYHOLDER_BY_LOGIN = "SELECT * FROM LKS.LKS.POLICYHOLDER WHERE LOGIN = ?";
 }

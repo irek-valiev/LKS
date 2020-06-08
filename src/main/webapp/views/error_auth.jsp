@@ -9,11 +9,11 @@
 <jsp:include page="headers/index_header.jsp"/>
 <div style="width: 100%; height: 600px;  display: flex; justify-content: center; align-items: center; background-color: #1082d4">
     <div align="center" style="width: 100%; height: 160px; background-color: #fffda0">
-        <form style="width: 100%; height: 100%" id="policyholderEmptyauthForm" action="${pageContext.servletContext.contextPath}/index" method="post">
+        <form style="width: 100%; height: 100%" id="policyholderErrorAuthForm" action="${pageContext.servletContext.contextPath}/index" method="post">
             <table>
                 <tr>
-                    <td align="center"><label>При попытке авторизоваться указаны пустые логин и/или пароль!<br>
-                        Повторите попытку авторизоваться или зарегистрируйте новый аккаунт!</label></td>
+                    <td align="center"><label>При попытке авторизоваться указаны не верные логин и/или пароль!<br>
+                        Повторите попытку авторизоваться и зарегистрируйте новый аккаунт!</label></td>
                 </tr>
             </table>
             <table align="center" style="height: 100%; width: 100%; border-spacing: 10px">

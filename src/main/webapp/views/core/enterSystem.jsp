@@ -30,7 +30,7 @@
 
 </head>
 <body>
-<jsp:include page="headers/system_header.jsp"/>
+<jsp:include page="../headers/system_header.jsp"/>
 <div style="width: 100%; line-height: 600px; vertical-align: bottom">
     <div align="center" style="background-color: #1082d4">
         <div class="topnav">

@@ -119,6 +119,7 @@ public class PolicyholderDAO implements DAO<Policyholder> {
         }
     }
 
+
     /**
      * Метод получения страхователя по ID
      * @return страхователь
@@ -141,7 +142,7 @@ public class PolicyholderDAO implements DAO<Policyholder> {
                throw new UnregistredPolicyholderException("Страхователь с идентификатором " + id + " отсутствует");
            }
         }catch (DataSourceServiceException e ){
-            log.error("Ошибка при получении списка всех клиентов", e);
+            log.error("Ошибка при получении списка всех страхователей", e);
             return null;
         } catch (SQLException | UnregistredAccountException e){
             log.error("Ощибка выполнения запроса " +PolicyholderQuerier.SELECT_POLICYHOLDER_BY_ID, e);
@@ -150,4 +151,32 @@ public class PolicyholderDAO implements DAO<Policyholder> {
             dataSourceService.closeConnection();
         }
     }
+
+    public Policyholder getByLogin (String login) throws UnregistredPolicyholderException{
+        try (PreparedStatement preparedStatement = dataSourceService.getPreparedStatement(PolicyholderQuerier.SELECT_POLICYHOLDER_BY_LOGIN)) {
+            preparedStatement.setString(1, login);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                String nameOfCompany = resultSet.getString(PolicyholderCredential.NAME_OF_COMPANY.getPolicyholderCredential());
+                String inn = resultSet.getString(PolicyholderCredential.INN.getPolicyholderCredential());
+                String director = resultSet.getString(PolicyholderCredential.DIRECTOR.getPolicyholderCredential());
+                String lgn = resultSet.getString(PolicyholderCredential.LOGIN.getPolicyholderCredential());
+                String psswd = resultSet.getString(PolicyholderCredential.PSSWD.getPolicyholderCredential());
+                int accountId = resultSet.getInt(PolicyholderCredential.ACCOUNT_ID.getPolicyholderCredential());
+                Account account = new AccountDAO().getById(accountId);
+                return new Policyholder(lgn,psswd,nameOfCompany,inn,director,account);
+            } else {
+                throw new UnregistredPolicyholderException("Страхователь с логином " + login + " отсутствует");
+            }
+        }catch (DataSourceServiceException e ){
+            log.error("Ошибка при получении списка всех страхователей", e);
+            return null;
+        } catch (SQLException | UnregistredAccountException e){
+            log.error("Ощибка выполнения запроса " +PolicyholderQuerier.SELECT_POLICYHOLDER_BY_LOGIN, e);
+            return null;
+        }finally {
+            dataSourceService.closeConnection();
+        }
+    }
 }
+

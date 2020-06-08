@@ -6,7 +6,7 @@
     <title>Страница профиля</title>
 </head>
 <body>
-<jsp:include page="headers/profile_header.jsp"/>
+<jsp:include page="../headers/profile_header.jsp"/>
 <div style="width: 100%; height: 600px; display: flex; justify-content: center; align-items: center; background-color: #1082d4">
 <div align="center" style="width: 100%; height: 170px; background-color: #fffda0">
     <form style="width: 100%; height: 100%" id="policyholderAuthForm" action="${pageContext.servletContext.contextPath}/auth" method="post">
