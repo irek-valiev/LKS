@@ -45,7 +45,6 @@ public class AuthServlet extends HttpServlet {
                 try {
                     policyholder = policyholderDAO.get(policyholderLogin, policyholderPsswd);
                 }catch (UnregistredPolicyholderException | UnregistredAccountException e){
-                    //TODO Вывести на GUI предупреждение с незарегистрирвоным клиентом
                     ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
                     log.error(e.getMessage());
                 }

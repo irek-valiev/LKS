@@ -10,11 +10,11 @@
         <table style="height: 100%">
             <tr>
                 <td><label>Целевой счет</label></td>
-                <td><input style="width: 100%" type="number" name="payTargetCount"></td>
+                <td><input style="width: 100%" type="number" name="payTargetCount" required placeholder="Укажите счет"></td>
             </tr>
             <tr>
                 <td><label>Сумма</label></td>
-                <td><input style="width: 100%" type="number" min="0" max="99999" name="paySum"></td>
+                <td><input style="width: 100%" type="number" min="0" max="999999" step="0.01" name="paySum" required placeholder="Введите сумму"></td>
             </tr>
             <tr>
                 <td colspan="2"><input style="width: 100%" type="submit" value="Перечислить"></td>

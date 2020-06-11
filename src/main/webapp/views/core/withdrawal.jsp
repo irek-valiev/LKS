@@ -10,7 +10,7 @@
         <table style="height: 100%">
             <tr>
                 <td><label>Сумма</label></td>
-                <td><input type="number" min="0" max="99999" name="withdrawal_sum"></td>
+                <td><input type="number" min="0" max="999999" step="0.01" name="withdrawal_sum" required placeholder="Введите сумму"></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" style="width: 100%" value="Вывести"></td>

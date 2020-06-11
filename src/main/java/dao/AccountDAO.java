@@ -49,7 +49,7 @@ public class AccountDAO implements DAO<Account> {
     @Override
     public void update (Account account){
         try (PreparedStatement preparedStatement = dataSourceService.getPreparedStatement(AccountQuerier.UPDATE_ACCOUNT_SUM)) {
-            preparedStatement.setInt(1, account.getSum());
+            preparedStatement.setDouble(1, account.getSum());
             preparedStatement.setInt(2, account.getId());
             preparedStatement.executeUpdate();
         } catch (DataSourceServiceException e){
@@ -74,7 +74,7 @@ public class AccountDAO implements DAO<Account> {
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
                 int accountNumber = resultSet.getInt(AccountInfo.ACCOUNT_NUMBER.getAccountInfo());
-                int sum = resultSet.getInt(AccountInfo.SUM.getAccountInfo());
+                double sum = resultSet.getDouble(AccountInfo.SUM.getAccountInfo());
                 return new Account(id, accountNumber, sum);
             }else {
                 throw new UnregistredAccountException("Счет с идентификатором " + id + " отсутствует");
@@ -104,7 +104,7 @@ public class AccountDAO implements DAO<Account> {
          ResultSet resultSet = preparedStatement.executeQuery();
          if(resultSet.next()){
              int id = resultSet.getInt(AccountInfo.ID.getAccountInfo());
-             int sum = resultSet.getInt(AccountInfo.SUM.getAccountInfo());
+             double sum = resultSet.getDouble(AccountInfo.SUM.getAccountInfo());
              return new Account(id, accountNumber, sum);
          } else {
              throw new UnregistredAccountException("Счет с номером " + accountNumber + " отсутствует");

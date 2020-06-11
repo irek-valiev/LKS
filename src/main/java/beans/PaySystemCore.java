@@ -45,7 +45,7 @@ public class PaySystemCore {
      */
     public void showAllPolicyholders(){
         //TODO написать метод вывода всех клиентов,
-        // переопределив в классе Client метод toString для отображения ФИО и списка счетов клиента.
+        // переопределив в классе Policyholder метод toString для отображения ФИО и списка счетов клиента.
     }
 
 }

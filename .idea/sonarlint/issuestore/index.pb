@@ -67,8 +67,6 @@ W
 'src/main/java/servlets/AuthServlet.java,4\3\43db498df11a3df87a2048bd59bdc8a681707d7b
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-k
-;src/main/java/servlets/InitPolicyholderTransferServlet.java,8\b\8bdc1f55aafd365951ba694c35a3b714cbf8153e
 ^
 .src/main/java/servlets/InitProfileServlet.java,1\9\196488e66f8e43bd0a77cc45b6f9d14824e03195
 Y
@@ -96,8 +94,6 @@ _
 /src/main/webapp/views/headers/system_header.jsp,c\0\c066c4ec106cab0038186f71d8f7457e67c8b532
 U
 %src/main/webapp/auth/registration.jsp,1\7\1775bb8a9f5ac23922fc8c84685d036891a90fcc
-X
-(src/main/resources/datasource.properties,9\e\9ef5fcffdd4d4a4129b2d0dc708b82782431cfa2
 `
 0src/main/webapp/views/headers/profile_header.jsp,b\3\b312034441ef97ac204426b66490dd02a758ba27
 O
@@ -136,3 +132,11 @@ W
 .src/main/webapp/views/error_nosession_page.jsp,6\0\604a6fa03e72a81a9eb5fda19df4d71c50421e3d
 Y
 )src/main/webapp/views/core/withdrawal.jsp,e\b\ebc30ee36ac64dc0c31ae0af530df78f6d20139d
+l
+<src/main/java/servlets/InitPolicyholdersTransferServlet.java,b\3\b37080880422eab48ea9ad645b0bc8681f44583f
+U
+%src/main/java/beans/TransferData.java,1\1\11d2af3905e5ba9aa84ba8b6c4ac5ac56394d63e
+V
+&src/main/java/dao/TransferDataDAO.java,9\0\90a10b4973aa3d211abe40fe1b524c0ceda5042a
+Z
+*src/main/java/dao/TransferDataQuerier.java,c\d\cdde3a4ea5f860ce32f2d918cf3b91eb9434d85d

@@ -16,7 +16,7 @@
                         <label>Логин</label>
                     </td>
                     <td>
-                        <input id="authLogin" type="text" name="login">
+                        <input id="authLogin" type="text" name="login" required placeholder="Введите логин">
                     </td>
                 </tr>
                 <tr>
@@ -24,7 +24,7 @@
                         <label>Пароль</label>
                     </td>
                     <td>
-                        <input type="password" name="pswd">
+                        <input type="password" name="pswd" required placeholder="Введите пароль">
                     </td>
                 </tr>
                 <tr>

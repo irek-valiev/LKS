@@ -26,10 +26,15 @@ public class WihtdrawalServlet extends HttpServlet {
     @Override
     public void doPost (HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
         String sum = httpServletRequest.getParameter(AccountInfo.WITHDRAWAL_SUM.getAccountInfo());
+        String delimeter = ",";
+        String[] subStr = sum.split(delimeter);
+        if(subStr.length == 2 ){
+            sum = String.join(".", subStr[0], subStr[1]);
+        }
         AccountDAO accountDAO = new AccountDAO();
         try {
             Account currentAccount  = accountDAO.getById((Integer) httpServletRequest.getSession().getAttribute(PolicyholderCredential.ACCOUNT_ID.getPolicyholderCredential()));
-            AccountProcessor.withdrawalAccount(currentAccount, Integer.parseInt(sum));
+            AccountProcessor.withdrawalAccount(currentAccount, Double.parseDouble(sum));
             accountDAO.update(currentAccount);
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_TRANSACTION_PAGE.getPage());
         } catch (Exception e){

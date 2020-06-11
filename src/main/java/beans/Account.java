@@ -26,7 +26,7 @@ public class Account {
     /**
      * Сумма на счете
      */
-    private int sum;
+    private double sum;
 
     /**
      * Конструктор счета по его номеру

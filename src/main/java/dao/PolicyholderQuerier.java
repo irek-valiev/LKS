@@ -13,8 +13,17 @@ public class PolicyholderQuerier {
      * SQL-запрос для получения из БД информацию со списком всех страхователей
      */
     protected static final String SELECT_ALL_POLICYHOLDER = "SELECT * FROM LKS.LKS.POLICYHOLDER";
+    /**
+     * SQL-запрос для получения из БД информации о страхователе по ID
+     */
 
     protected static final String SELECT_POLICYHOLDER_BY_ID = "SELECT * FROM LKS.LKS.POLICYHOLDER WHERE ID = ?";
-
+    /**
+     * SQL-запрос для получения из БД информации о страхователе по логину
+     */
     protected static final String SELECT_POLICYHOLDER_BY_LOGIN = "SELECT * FROM LKS.LKS.POLICYHOLDER WHERE LOGIN = ?";
+    /**
+     * SQL-запрос для получения из БД информации о страхователе по Account_ID
+     */
+    protected static final String SELECT_POLICYHOLDER_BY_ACCOUNT_ID = "SELECT * FROM LKS.LKS.POLICYHOLDER WHERE ACCOUNT_ID = ?";
 }

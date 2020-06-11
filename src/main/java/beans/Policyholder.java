@@ -60,6 +60,15 @@ public class Policyholder implements Organization {
         this.director = director;
         this.account = account;
     }
+    /**
+     * Конструктор
+     * @param id идентификатор
+     * @param nameOfCompany наименование организации
+     */
+    public Policyholder(int id, String nameOfCompany){
+        this.id = id;
+        this.nameOfCompany = nameOfCompany;
+    }
 
     /**
      * Конструктор

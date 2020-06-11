@@ -178,5 +178,32 @@ public class PolicyholderDAO implements DAO<Policyholder> {
             dataSourceService.closeConnection();
         }
     }
+
+    /**
+     * Метод получения страхователя по Accoint_ID
+     * @return страхователь
+     */
+
+    public Policyholder getByAccountId (int Account_id) throws UnregistredPolicyholderException{
+        try (PreparedStatement preparedStatement = dataSourceService.getPreparedStatement(PolicyholderQuerier.SELECT_POLICYHOLDER_BY_ACCOUNT_ID)) {
+            preparedStatement.setInt(1, Account_id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                int id = resultSet.getInt(PolicyholderCredential.ID.getPolicyholderCredential());
+                String nameOfCompany = resultSet.getString(PolicyholderCredential.NAME_OF_COMPANY.getPolicyholderCredential());
+                return new Policyholder(id, nameOfCompany);
+            } else {
+                throw new UnregistredPolicyholderException("Страхователь с идентификатором счета" + Account_id + " отсутствует");
+            }
+        }catch (DataSourceServiceException e ){
+            log.error("Ошибка при получении списка всех страхователей", e);
+            return null;
+        } catch (SQLException  e){
+            log.error("Ощибка выполнения запроса " + PolicyholderQuerier.SELECT_POLICYHOLDER_BY_ACCOUNT_ID, e);
+            return null;
+        }finally {
+            dataSourceService.closeConnection();
+        }
+    }
 }
 

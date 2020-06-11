@@ -1,9 +1,14 @@
 
+
+java:S1192”"rDefine a constant instead of duplicating this literal "ĞÑ‰Ğ¸Ğ±ĞºĞ° Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñ Ğ·Ğ°Ğ¿Ñ€Ğ¾ÑĞ° " 3 times.(—¿ƒt8şé¦™ª.
+·
+java:S1192‘"˜Define a constant instead of duplicating this literal "ĞÑˆĞ¸Ğ±ĞºĞ° Ğ¿Ñ€Ğ¸ Ğ¿Ğ¾Ğ»ÑƒÑ‡ĞµĞ½Ğ¸Ğ¸ ÑĞ¿Ğ¸ÑĞºĞ° Ğ²ÑĞµÑ… ÑÑ‚Ñ€Ğ°Ñ…Ğ¾Ğ²Ğ°Ñ‚ĞµĞ»ĞµĞ¹" 3 times.(ù€êî8şé¦™ª.
 H
 java:S1168t"+Return an empty collection instead of null.(¥¹ï8àÕ”Ê§.
-z
-java:S1192M"XDefine a constant instead of duplicating this literal " Ğ¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚" 3 times.(ÿû¯‹şÿÿÿÿ8µÑ÷©.
 _
 java:S1128"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8í­·ü§.
+z
+java:S1192M"XDefine a constant instead of duplicating this literal " Ğ¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚" 4 times.(ÿû¯‹şÿÿÿÿ8µÑ÷©.
 H
 java:S1168q"+Return an empty collection instead of null.(¥¹ï8àÕ”Ê§.
+s	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌŸò½øÿÿÿÿ8“¿¨™ª.

@@ -18,16 +18,18 @@
             <tr>
                 <td>
                     <label>Логин</label>
-                    <input type="text" name="login">
+                    <input type="text" style="width: 8%" name="login" required placeholder="Введите логин">
                     <label>Пароль</label>
-                    <input type="text" name="pswd">
+                    <input type="text"  style="width: 10%" name="pswd" required placeholder="Введите пароль">
                     <label>Наименование организации</label>
-                    <input type="text" name="nameOfCompany">
+                    <input type="text" style="width: 17%" name="nameOfCompany" required placeholder="Введите название организации">
                     <label>ИНН</label>
-                    <input type="text" name="inn">
+                    <input type="text"  style="width: 8%" name="inn" required placeholder="Введите ИНН">
                     <label>Директор</label>
-                    <input type="text" name="director">
-                    <input type="submit" value="Зарегистрировать">
+                    <input type="text"  style="width: 19%" name="director"required placeholder="Введите фамилию руководителя">
+                </td>
+                <td>
+                    <input type="submit"   value="Зарегистрировать">
                 </td>
             </tr>
             <tr>

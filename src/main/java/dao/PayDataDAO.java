@@ -27,8 +27,11 @@ public class PayDataDAO implements DAO<PayData> {
         try (PreparedStatement preparedStatement = dataSourceService.getPreparedStatement(PayDataQuerier.INSERT_INTO_PAY_DATA_VALUES)){
             preparedStatement.setInt(1, payData.getPolicyholder().getId());
             preparedStatement.setString(2, payData.getTargetAccount());
-            preparedStatement.setInt(3, payData.getSum());
-            preparedStatement.setTimestamp(4, new Timestamp(payData.getData().getTime()));
+            preparedStatement.setString(3, payData.getPolicyholder().getNameOfCompany());
+            preparedStatement.setInt(4, payData.getPolicyholder().getAccount().getId());
+            preparedStatement.setInt(5, payData.getPolicyholder().getAccount().getAccountNumber());
+            preparedStatement.setDouble(6, payData.getSum());
+            preparedStatement.setTimestamp(7, new Timestamp(payData.getData().getTime()));
             preparedStatement.executeUpdate();
         }catch (DataSourceServiceException e){
             log.error("Ощибка подключения к БД при попытке вставки записи с данными оплаты", e);
