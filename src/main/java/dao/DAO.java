@@ -1,5 +1,6 @@
 package dao;
 
+import exceptions.ChekTaxException;
 import exceptions.RegException;
 import exceptions.UnregistredPolicyholderException;
 
@@ -17,7 +18,9 @@ public interface DAO<T> {
      *
      * @param t обобщенный тип
      */
-    void insert(T t) throws UnregistredPolicyholderException, RegException;
+    void insert(T t) throws UnregistredPolicyholderException, RegException, ChekTaxException;
+
+    void insert();
 
     default T get (String firstParam) throws Exception{
         return null;

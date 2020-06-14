@@ -24,7 +24,7 @@
                     <label>Наименование организации</label>
                     <input type="text" style="width: 17%" name="nameOfCompany" required placeholder="Введите название организации">
                     <label>ИНН</label>
-                    <input type="text"  style="width: 8%" name="inn" required placeholder="Введите ИНН">
+                    <input type="text"  style="width: 8%" minlength="10" maxlength="12" name="inn" required placeholder="Введите ИНН">
                     <label>Директор</label>
                     <input type="text"  style="width: 19%" name="director"required placeholder="Введите фамилию руководителя">
                 </td>

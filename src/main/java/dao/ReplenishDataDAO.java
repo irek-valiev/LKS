@@ -41,4 +41,9 @@ public class ReplenishDataDAO implements DAO<ReplenishData> {
             dataSourceService.closeConnection();
         }
     }
+
+    @Override
+    public void insert() {
+
     }
+}

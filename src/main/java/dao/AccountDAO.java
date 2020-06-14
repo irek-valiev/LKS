@@ -42,6 +42,11 @@ public class AccountDAO implements DAO<Account> {
         }
     }
 
+    @Override
+    public void insert() {
+
+    }
+
     /**
      * Метод обновления информации о счете
      * @param account объект счет

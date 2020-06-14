@@ -52,6 +52,11 @@ public class PolicyholderDAO implements DAO<Policyholder> {
         }
     }
 
+    @Override
+    public void insert() {
+
+    }
+
     /**
      * Метод получения объекта страхователя из БД по логину и паролю
      * @param lgn логин

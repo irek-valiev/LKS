@@ -45,4 +45,9 @@ public class TransferDataDAO implements DAO<TransferData> {
             dataSourceService.closeConnection();
         }
     }
+
+    @Override
+    public void insert() {
+
+    }
 }

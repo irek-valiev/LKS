@@ -86,6 +86,21 @@ public class Policyholder implements Organization {
         this.director = director;
         this.account = account;
     }
+    /**
+     * Конструктор
+     * @param login логин
+     * @param psswd пароль
+     * @param nameOfCompany наименование организации
+     * @param inn ИНН
+     * @param director Имя руководителя
+     */
+    public Policyholder(String login, String psswd, String nameOfCompany, String inn, String director){
+        this.login = login;
+        this.psswd = psswd;
+        this.nameOfCompany = nameOfCompany;
+        this.inn = inn;
+        this.director = director;
+    }
 
     /**
      * Сеттер списка счетов

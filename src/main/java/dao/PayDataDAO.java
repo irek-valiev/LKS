@@ -41,4 +41,9 @@ public class PayDataDAO implements DAO<PayData> {
             dataSourceService.closeConnection();
         }
     }
+
+    @Override
+    public void insert() {
+
+    }
 }

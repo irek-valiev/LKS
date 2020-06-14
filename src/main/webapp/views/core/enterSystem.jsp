@@ -22,7 +22,7 @@
             background-color: #ddd;
             color: black;
         }
-        .topnav a.active{
+        .topnav a:active{
             background-color: #4CAF50;
             color: white;
         }

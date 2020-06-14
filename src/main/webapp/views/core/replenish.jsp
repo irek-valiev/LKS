@@ -11,7 +11,7 @@
         <table style="height: 100%">
             <tr>
                 <td><label>Сумма</label></td>
-                <td><input type="number" min="0" max="999999" step="0.01" name="replenish_sum" required placeholder="Введите сумму"></td>
+                <td><input type="number" min="0" max="9999999999" step="0.01" name="replenish_sum" required placeholder="Введите сумму"></td>
             </tr>
             <tr>
                 <td colspan="2"><input style="width: 100%" type="submit" value="Пополнить"></td>
