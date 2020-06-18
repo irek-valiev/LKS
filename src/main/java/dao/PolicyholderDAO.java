@@ -1,11 +1,9 @@
 package dao;
 import beans.Account;
+import beans.Okved;
 import beans.Policyholder;
 import enums.PolicyholderCredential;
-import exceptions.DataSourceServiceException;
-import exceptions.RegException;
-import exceptions.UnregistredAccountException;
-import exceptions.UnregistredPolicyholderException;
+import exceptions.*;
 import lombok.extern.slf4j.Slf4j;
 import service.DataSourceService;
 
@@ -155,6 +153,11 @@ public class PolicyholderDAO implements DAO<Policyholder> {
         }finally {
             dataSourceService.closeConnection();
         }
+    }
+
+    @Override
+    public Okved getOkved(String kod_okved) throws OkvedException {
+        return null;
     }
 
     public Policyholder getByLogin (String login) throws UnregistredPolicyholderException{

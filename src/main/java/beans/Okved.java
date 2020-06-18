@@ -21,7 +21,7 @@ public class Okved {
     /**
      * Код вида экономической деятельности
      */
-    private String kodOkved;
+    private String kod_okved;
     /**
      * Расшифровка вида экономической деятельности
      */
@@ -37,10 +37,10 @@ public class Okved {
 
     /**
      * Конструктор ОКВЭДа по его коду
-     * @param kodOkved номер счета
+     * @param kod_okved номер счета
      */
-    public Okved (String kodOkved){
-        this.kodOkved = kodOkved;
+    public Okved (String kod_okved){
+        this.kod_okved = kod_okved;
     }
     /**
      * Переопределнный метод equals
@@ -50,14 +50,14 @@ public class Okved {
     @Override
     public boolean equals(Object object){
         Okved okved = (Okved) object;
-        return this.kodOkved == okved.getKodOkved();
+        return this.kod_okved == okved.getKod_okved();
     }
     /**
      * Переопределенный метод вывода класса ОКВЭД в строку
      * @return код ВЭД, класс риска и страховой тариф
      */
     public String toString(){
-        return String.join(" | ", String.valueOf(kodOkved), String.valueOf(riskClass), String.valueOf(rate));
+        return String.join(" | ", String.valueOf(kod_okved), String.valueOf(riskClass), String.valueOf(rate));
     }
 
 }

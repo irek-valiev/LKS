@@ -1,7 +1,7 @@
 
-m
-java:S1206,"PThis class overrides "equals()" and should therefore also override "hashCode()".(í‹«ﬁ8“Û†ﬂ§.
-<
-java:S2097,"Add a type test to this method.(í‹«ﬁ8…û¢ﬂ§.
 b
 java:S2259."EA "NullPointerException" could be thrown; "account" is nullable here.(◊»ñ8ê˙£ﬂ§.
+<
+java:S2097,"Add a type test to this method.(í‹«ﬁ8…û¢ﬂ§.
+m
+java:S1206,"PThis class overrides "equals()" and should therefore also override "hashCode()".(í‹«ﬁ8“Û†ﬂ§.

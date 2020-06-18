@@ -38,7 +38,6 @@ public enum Page {
      * Страница профиля
      */
     PROFILE_PAGE("/views/core/profile.jsp"),
-
     /**
      * Страница с ошибкой операций со счетом
      */
@@ -56,6 +55,10 @@ public enum Page {
      * Страница ошибки при попытке авторизоваться с неверными логином и/или паролем
      */
     ERROR_AUTH_PAGE("/views/error_auth.jsp"),
+    /**
+     * Страница нехватки средств на счету
+     */
+    NOT_ENOUGH_MONEY("/views/core/notEnoughMoney.jsp"),
     /**
      * Страница ошибки при nullе
      */

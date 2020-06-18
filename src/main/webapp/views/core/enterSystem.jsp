@@ -38,6 +38,7 @@
             <a href="${pageContext.servletContext.contextPath}/initPolicyholdersTransfer" target="payOperationFrame">Перевод</a>
             <a href="withdrawal.jsp" target="payOperationFrame">Вывод</a>
             <a href="replenish.jsp" target="payOperationFrame">Пополнение</a>
+            <a href="${pageContext.servletContext.contextPath}/initPolicyholdersChekTax" target="payOperationFrame">Расчет страховых взносов</a>
         </div>
         <iframe frameborder="0" name="payOperationFrame" width="100%" height="200px"/>
     </div>

@@ -1,19 +1,43 @@
 package enums;
 
 /**
- * Перечисление, содержащее данные для страхового тарифа
+ * Перечисление, содержащее данные для расчета суммы страховых взносов
  */
 public enum ChekTaxCredential {
     /**
-     * Идентификатор (фактически список)
+     * Идентификатор
      */
-    ID("okved_id"),
+    CHEKTAX_ID("chektax_id"),
     /**
-     * Код вида экономической деятельности
+     * Идентификатор страхователя
+     */
+    POLICYHOLDER_ID("policyholder_id"),
+    /**
+     * Наименование организации
+     */
+    POLICYHOLDER_NAME("policyholder_name"),
+    /**
+     * ИНН организации
+     */
+    POLICYHOLDER_INN("policyholder_inn"),
+    /**
+     * Фонд оплаты труда
+     */
+    TOTAL_SALARY_MONTH("total_salary_month"),
+    /**
+     * Год
+     */
+    YEAR("year"),
+    /**
+     * Месяц
+     */
+    MONTH("month"),
+    /**
+     * Код ВЭД
      */
     KOD_OKVED("kod_okved"),
     /**
-     * Расшифровка вида экономической деятельности
+     * Нименование ВЭД
      */
     NAME_VED("name_ved"),
     /**
@@ -23,10 +47,15 @@ public enum ChekTaxCredential {
     /**
      * Страховой тариф
      */
-    RATE("rate");
+    RATE("rate"),
+    /**
+     * Сумма страхового взноса
+     */
+    CONTRIBUTION("contribution");
+
 
     /**
-     * Данные для страхового тарифа
+     * Данные для расчета суммы страховых взносов
      */
     private String chekTaxCredential;
 

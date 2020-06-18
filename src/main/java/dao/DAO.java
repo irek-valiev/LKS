@@ -1,6 +1,8 @@
 package dao;
 
+import beans.Okved;
 import exceptions.ChekTaxException;
+import exceptions.OkvedException;
 import exceptions.RegException;
 import exceptions.UnregistredPolicyholderException;
 
@@ -57,4 +59,5 @@ public interface DAO<T> {
         return null;
     }
 
+    Okved getOkved(String kod_okved) throws OkvedException;
 }

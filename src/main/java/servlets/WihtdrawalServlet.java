@@ -9,6 +9,7 @@ import dao.WithdrawalDataDAO;
 import enums.AccountInfo;
 import enums.Page;
 import enums.PolicyholderCredential;
+import exceptions.WithdrawalException;
 import processors.AccountProcessor;
 import utils.ServletUtil;
 
@@ -47,6 +48,8 @@ public class WihtdrawalServlet extends HttpServlet {
             WithdrawalData withdrawalData = new WithdrawalData (policyholder, Double.parseDouble(sum), new Date());
             withdrawalDataDAO.insert(withdrawalData);
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_TRANSACTION_PAGE.getPage());
+        } catch (WithdrawalException e) {
+            ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.NOT_ENOUGH_MONEY.getPage());
         } catch (Exception e){
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
         }

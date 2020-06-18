@@ -1,7 +1,7 @@
 
-^
-java:S1126U"AReplace this if-then-else statement by a single return statement.(†ì”8¯†Ÿ©.
-c
-java:S1126E"AReplace this if-then-else statement by a single return statement.(Ú¯“æşÿÿÿÿ8¥ß¨¨.
-L
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8ñ¿äª¨.
+\
+java:S1126"AReplace this if-then-else statement by a single return statement.(†ì”8¯†Ÿ©.
+J
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8ñ¿äª¨.
+a
+java:S1126"AReplace this if-then-else statement by a single return statement.(Ú¯“æşÿÿÿÿ8¥ß¨¨.

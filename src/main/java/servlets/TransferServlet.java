@@ -8,6 +8,7 @@ import dao.PolicyholderDAO;
 import dao.TransferDataDAO;
 import enums.Page;
 import enums.PolicyholderCredential;
+import exceptions.WithdrawalException;
 import processors.AccountProcessor;
 import utils.ServletUtil;
 
@@ -51,7 +52,9 @@ public class TransferServlet extends HttpServlet {
             TransferData transferData = new TransferData(fromPolicyholder, toPolicyholder, Double.parseDouble (transferSum), new Date());
             transferDataDAO.insert(transferData);
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_TRANSACTION_PAGE.getPage());
-        } catch (Exception e){
+        } catch (WithdrawalException e) {
+            ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.NOT_ENOUGH_MONEY.getPage());
+        }  catch (Exception e){
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
         }
 

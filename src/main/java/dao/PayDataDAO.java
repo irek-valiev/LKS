@@ -1,7 +1,9 @@
 package dao;
 
+import beans.Okved;
 import beans.PayData;
 import exceptions.DataSourceServiceException;
+import exceptions.OkvedException;
 import lombok.extern.slf4j.Slf4j;
 import service.DataSourceService;
 
@@ -45,5 +47,10 @@ public class PayDataDAO implements DAO<PayData> {
     @Override
     public void insert() {
 
+    }
+
+    @Override
+    public Okved getOkved(String kod_okved) throws OkvedException {
+        return null;
     }
 }

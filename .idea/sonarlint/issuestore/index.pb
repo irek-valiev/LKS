@@ -168,3 +168,19 @@ Z
 *src/main/java/enums/ChekTaxCredential.java,e\4\e4ff355e116c96975750e25047ef345861fdf8fb
 Q
 !src/main/java/dao/ChekTaxDAO.java,1\2\12a093f87dc3e67a962ffc25366bf9ad5568a948
+O
+src/main/java/dao/OkvedDAO.java,7\b\7bae2ace3a387eed6a211e8f0b2687621c2dc288
+S
+#src/main/java/dao/OkvedQuerier.java,1\4\14bd2d065099809dbad41211d9e6d248da1ba379
+\
+,src/main/java/exceptions/OkvedException.java,c\1\c1bbe138e8bf76dd6f206427b71859f8a793f64d
+Z
+*src/main/java/servlets/ChekTaxServlet.java,2\e\2e84477c792ec9c426ea400d1e2fbf0e889a0a95
+Z
+*src/main/java/processors/TaxProcessor.java,1\1\11f0574ae3c1ca76fd47a51225f3add735288d55
+V
+&src/main/webapp/views/core/chektax.jsp,f\3\f3f832bd071cb3f9d7ad4024702611d00d13b15c
+k
+;src/main/java/servlets/InitPolicyholdersChekTaxServlet.java,b\1\b1eea2523b2b3ffcd43997d863ec3aae46ffbe63
+\
+,src/main/webapp/views/core/chektaxResult.jsp,2\8\285160960370ce9655a796d323cb409ce0285bc1

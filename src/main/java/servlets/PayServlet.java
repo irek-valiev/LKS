@@ -5,6 +5,7 @@ import beans.Policyholder;
 import dao.AccountDAO;
 import dao.PayDataDAO;
 import enums.Page;
+import exceptions.WithdrawalException;
 import lombok.extern.slf4j.Slf4j;
 import processors.AccountProcessor;
 import utils.ServletUtil;
@@ -45,7 +46,9 @@ public class PayServlet extends HttpServlet {
             PayData payData = new PayData(payPolicyholder, payTargetCount, Double.parseDouble(paySum), new Date());
             payDataDAO.insert(payData);
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_TRANSACTION_PAGE.getPage());
-        }catch (Exception e){
+        } catch (WithdrawalException e) {
+            ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.NOT_ENOUGH_MONEY.getPage());
+        } catch (Exception e){
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
         }
     }

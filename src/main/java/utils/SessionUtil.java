@@ -1,9 +1,11 @@
 package utils;
 
 import beans.Account;
+import beans.ChekTax;
 import beans.Policyholder;
 import dao.AccountDAO;
 import enums.AccountInfo;
+import enums.ChekTaxCredential;
 import enums.Page;
 import enums.PolicyholderCredential;
 import exceptions.UnregistredAccountException;
@@ -43,7 +45,7 @@ public class SessionUtil {
     /**
      * Метод заполнения сессии данными
      * @param httpSession сессия
-     * @param policyholder клиент
+     * @param policyholder страхователь
      */
     public static void fillSession(HttpSession httpSession, Policyholder policyholder){
             httpSession.setAttribute(PolicyholderCredential.ID.getPolicyholderCredential(), policyholder.getId());
@@ -56,6 +58,19 @@ public class SessionUtil {
             httpSession.setAttribute(AccountInfo.ACCOUNT_NUMBER.getAccountInfo(), policyholder.getAccount().getAccountNumber());
             httpSession.setAttribute(AccountInfo.SUM.getAccountInfo(), policyholder.getAccount().getSum());
             httpSession.setMaxInactiveInterval(300);
+    }
+
+    /**
+     * Метод заполнения сессии данными
+     * @param httpSession сессия
+     * @param chekTax расчет страховых взносов
+     */
+    public static void fillCTSession(HttpSession httpSession, ChekTax chekTax){
+        httpSession.setAttribute(ChekTaxCredential.NAME_VED.getChekTaxCredential(), chekTax.getOkved().getNameVed());
+        httpSession.setAttribute(ChekTaxCredential.RISK_CLASS.getChekTaxCredential(), chekTax.getOkved().getRiskClass());
+        httpSession.setAttribute(ChekTaxCredential.RATE.getChekTaxCredential(), chekTax.getOkved().getRate());
+        httpSession.setAttribute(ChekTaxCredential.CONTRIBUTION.getChekTaxCredential(), chekTax.getContribution());
+        httpSession.setMaxInactiveInterval(300);
     }
 
     /**

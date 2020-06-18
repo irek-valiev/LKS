@@ -11,7 +11,7 @@
       <table style="height: 100%">
          <tr>
             <td><label>Кому</label></td>
-            <td><select name="toPolicyholder" style="width: 100%">
+            <td><select name="toPolicyholder" required style="width: 100%">
                <option selected disabled>Выберите страхователя</option>
                <c:forEach items="${allPolicyholders}" var="policyholder">
                   <option value="${policyholder.account.id}">${policyholder.nameOfCompany}</option>

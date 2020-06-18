@@ -1,8 +1,10 @@
 package dao;
 
 import beans.Account;
+import beans.Okved;
 import enums.AccountInfo;
 import exceptions.DataSourceServiceException;
+import exceptions.OkvedException;
 import exceptions.UnregistredAccountException;
 import lombok.extern.slf4j.Slf4j;
 import service.DataSourceService;
@@ -93,6 +95,11 @@ public class AccountDAO implements DAO<Account> {
         }finally {
             dataSourceService.closeConnection();
         }
+    }
+
+    @Override
+    public Okved getOkved(String kod_okved) throws OkvedException {
+        return null;
     }
 
     /**
