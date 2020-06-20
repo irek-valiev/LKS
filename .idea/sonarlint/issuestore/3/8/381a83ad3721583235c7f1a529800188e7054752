@@ -1,9 +1,9 @@
 
+:	Web:S5256"%Add "<th>" headers to this "<table>".(°Ó¼®
 CWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(Õ¶¯M
+>	Web:S1827")Remove this deprecated "align" attribute.(´ÛÙú
+HWeb:TableWithoutCaptionCheck" Add a description to this table.(°Ó¼®
+HWeb:TableWithoutCaptionCheck" Add a description to this table.(´ÛÙú
 >	Web:S1827
 ")Remove this deprecated "align" attribute.(”Š¶á
-HWeb:TableWithoutCaptionCheck" Add a description to this table.(°Ó¼®
-:	Web:S5256"%Add "<th>" headers to this "<table>".(°Ó¼®
-HWeb:TableWithoutCaptionCheck" Add a description to this table.(´ÛÙú
 :	Web:S5256"%Add "<th>" headers to this "<table>".(´ÛÙú
->	Web:S1827")Remove this deprecated "align" attribute.(´ÛÙú

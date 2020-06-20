@@ -8,7 +8,7 @@
 
 
     <div align="center" style="width: 100%; height: 160px; background-color: #fffda0">
-        <label>Страница полной ЖОПЫ!!!!</label>
+        <label>При выполнении данной операции произошла ошибка!!!</label>
 
     </div>
 

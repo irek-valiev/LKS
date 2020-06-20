@@ -184,3 +184,5 @@ k
 ;src/main/java/servlets/InitPolicyholdersChekTaxServlet.java,b\1\b1eea2523b2b3ffcd43997d863ec3aae46ffbe63
 \
 ,src/main/webapp/views/core/chektaxResult.jsp,2\8\285160960370ce9655a796d323cb409ce0285bc1
+]
+-src/main/webapp/views/core/notEnoughMoney.jsp,c\8\c8d6b3beabba647be447f54929ecba801ed3064e

@@ -46,36 +46,49 @@ public class ChekTaxServlet extends HttpServlet {
         if(subStr.length == 2 ){
             totalSalaryMonth = String.join(".", subStr[0], subStr[1]);
         }
-        ChekTaxDAO chekTaxDAO = new ChekTaxDAO();
-        OkvedDAO okvedDAO = new OkvedDAO();
-        Okved okved;
-        ChekTax chekTax;
-        PolicyholderDAO policyholderDAO = new PolicyholderDAO();
-        try {
-            Policyholder chekTaxPolicyholder = SessionUtil.getPolicyholderFromSession(httpServletRequest.getSession());
-            okved = okvedDAO.getOkved(kodOkved);
-            double tax =  TaxProcessor.tax(okved, Double.parseDouble(totalSalaryMonth));
-            chekTax = new ChekTax(chekTaxPolicyholder, Double.parseDouble(totalSalaryMonth), year, month, okved,  tax);
-            chekTaxDAO.insert(chekTax);
-            Policyholder policyholder = policyholderDAO.getById(chekTaxPolicyholder.getId());
-            SessionUtil.fillCTSession(httpServletRequest.getSession(), chekTax);
-            RequestDispatcher dispatcher = httpServletRequest.getRequestDispatcher("views/core/chektaxResult.jsp");
+        if(isChekTaxAttributeNull(year, month, kodOkved, totalSalaryMonth)){
+            ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.CHEK_PAGE.getPage());
+        } else {
+            ChekTaxDAO chekTaxDAO = new ChekTaxDAO();
+            OkvedDAO okvedDAO = new OkvedDAO();
+            Okved okved;
+            ChekTax chekTax;
+            PolicyholderDAO policyholderDAO = new PolicyholderDAO();
             try {
-                dispatcher.forward(httpServletRequest, httpServletResponse);
-            } catch (ServletException | IOException e){
+                Policyholder chekTaxPolicyholder = SessionUtil.getPolicyholderFromSession(httpServletRequest.getSession());
+                okved = okvedDAO.getOkved(kodOkved);
+                double tax =  TaxProcessor.tax(okved, Double.parseDouble(totalSalaryMonth));
+                chekTax = new ChekTax(chekTaxPolicyholder, Double.parseDouble(totalSalaryMonth), year, month, okved,  tax);
+                chekTaxDAO.insert(chekTax);
+                Policyholder policyholder = policyholderDAO.getById(chekTaxPolicyholder.getId());
+                SessionUtil.fillCTSession(httpServletRequest.getSession(), chekTax);
+                RequestDispatcher dispatcher = httpServletRequest.getRequestDispatcher("views/core/chektaxResult.jsp");
+                try {
+                    dispatcher.forward(httpServletRequest, httpServletResponse);
+                } catch (ServletException | IOException e){
+                    ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
+                }
+            } catch (ChekTaxException e) {
+                e.printStackTrace();
+            } catch (OkvedException e) {
+                e.printStackTrace();
+            } catch (UnregistredAccountException e) {
+                e.printStackTrace();
+            }catch (Exception e){
                 ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
             }
-            //ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.CHEKTAX_RESULT_PAGE.getPage());
-
-        } catch (ChekTaxException e) {
-            e.printStackTrace();
-        } catch (OkvedException e) {
-            e.printStackTrace();
-        } catch (UnregistredAccountException e) {
-            e.printStackTrace();
-        }catch (Exception e){
-            ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
         }
+    }
 
+    private boolean isChekTaxAttributeNull (String year, String month, String kodOkved, String totalSalaryMonth){
+        if(year == null){
+            return true;
+        }else if(month == null){
+            return true;
+        }else if(kodOkved == null){
+            return true;
+        } else if(totalSalaryMonth == null){
+            return true;
+        }else return false;
     }
 }

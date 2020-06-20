@@ -38,7 +38,9 @@ public class PayServlet extends HttpServlet {
             paySum = String.join(".", subStr[0], subStr[1]);
         }
         PayDataDAO payDataDAO = new PayDataDAO();
-        try {
+        if(isPayAttributeNull(payTargetCount, paySum)){
+            ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.CHEK_PAGE.getPage());
+        } else try {
             Policyholder payPolicyholder = SessionUtil.getPolicyholderFromSession(httpServletRequest.getSession());
             AccountProcessor.withdrawalAccount(payPolicyholder.getAccount(), Double.parseDouble(paySum));
             AccountDAO accountDAO = new AccountDAO();
@@ -51,5 +53,12 @@ public class PayServlet extends HttpServlet {
         } catch (Exception e){
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
         }
+    }
+    private boolean isPayAttributeNull(String payTargetCount, String paySum){
+        if(payTargetCount == null){
+            return true;
+        }else if(paySum == null){
+            return true;
+        }else return false;
     }
 }

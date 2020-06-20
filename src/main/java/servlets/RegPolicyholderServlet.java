@@ -75,9 +75,7 @@ public class RegPolicyholderServlet extends HttpServlet {
                 } catch (RegException e){
                     ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.ERROR_PAGE.getPage());
                 }
-
                 HttpSession httpSession = httpServletRequest.getSession();
-
                 SessionUtil.fillSession(httpSession, policyholder);
                 ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_REG_PAGE.getPage());
             }

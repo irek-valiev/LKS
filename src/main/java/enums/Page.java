@@ -4,27 +4,22 @@ package enums;
  * Перечисление, содержащие страницы для навигации
  */
 public enum Page {
-
     /**
      * Главная страница
      */
     INDEX_PAGE("/index.jsp"),
-
     /**
      * Страница регистрации
      */
     REG_PAGE("/auth/registration.jsp"),
-
     /**
      * Страница успешной регистрации
      */
     SUCCESS_REG_PAGE("/views/core/successRegPolicyholder.jsp"),
-
     /**
      * Страница аутентификации
      */
     AUTH_PAGE("/auth/auth.jsp"),
-
     /**
      * Страница успешной аутентификации
      */
@@ -33,7 +28,6 @@ public enum Page {
      *Страница упешного завершения проводимой денежной операции
      */
     SUCCESS_TRANSACTION_PAGE("/views/core/successTransaction.jsp"),
-
     /**
      * Страница профиля
      */
@@ -42,7 +36,6 @@ public enum Page {
      * Страница с ошибкой операций со счетом
      */
     ERROR_PAGE("/views/error.jsp"),
-
     /**
      * Страница ошибки при регистрации с пустыми полями
      */
@@ -67,12 +60,14 @@ public enum Page {
      * Инфостраница для фильтра при потыке пройти внутрь системы без авторизации
      */
     ERROR_NOSESSION_PAGE("/views/error_nosession_page.jsp"),
-
     /**
      * Страница с ошибкой при регистрации
      */
-    ERROR_REG_PAGE("/views/error_reg.jsp");
-
+    ERROR_REG_PAGE("/views/error_reg.jsp"),
+    /**
+     *Проверочная страница
+     */
+    CHEK_PAGE("/views/chek.jsp");
     /**
      * Поле страница
      */
